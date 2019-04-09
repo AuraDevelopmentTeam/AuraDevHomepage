@@ -3,6 +3,9 @@
   <head>
    <title>Aura Development Team</title>
 
+   <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+   <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Custom styles for this template -->
