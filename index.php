@@ -1,7 +1,16 @@
+<?php
+//connect to mysql
+include_once "includes/mysql_connection.php";
+
+//get page settings
+include_once "includes/get_settings.php";
+$settings = loadSettings($conn);
+
+?>
 <!doctype html>
 <html>
   <head>
-   <title>Aura Development Team</title>
+   <title><?php echo($settings["page_title"]); ?></title>
 
    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
@@ -21,7 +30,7 @@
 
       <div class="masthead clearfix mb-auto">
         <div class="container inner">
-          <h3 class="masthead-brand">Aura Development Team</h3>
+          <h3 class="masthead-brand"><?php echo($settings["navbar_brand"]); ?></h3>
           <nav class="masthead-nav">
             <ul class="nav masthead-nav">
               <li class="nav-link active"><a href="#">Home</a></li>
@@ -34,7 +43,7 @@
       <div class="container">
         <div class="inner cover">
           <img class="homepage-image" src="https://f.xeya.me/f/2019/03/1554040868-FsxM0.svg">
-          <p class="lead">We are a small team of Minecraft Plugin Developers that works on their projects with passion and dedication.</p>
+          <p class="lead"><?php echo($settings["homepage_text"]); ?></p>
           <p class="lead projects-button">
             <a href="./projects.php" class="btn btn-lg btn-secondary">Our Projects</a>
           </p>

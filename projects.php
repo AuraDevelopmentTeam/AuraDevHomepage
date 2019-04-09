@@ -18,7 +18,7 @@ include_once "includes/build_project_bootstrap_card.php";
 <!doctype html>
 <html>
   <head>
-   <title>Aura Development Team</title>
+   <title><?php echo($settings["page_title"]); ?></title>
 
    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
