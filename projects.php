@@ -1,3 +1,20 @@
+<?php
+//connect to mysql
+include_once "includes/mysql_connection.php";
+
+//get page settings
+include_once "includes/get_settings.php";
+$settings = loadSettings($conn);
+
+//get list of projects
+include_once "includes/get_projects.php";
+$projects_data = getProjects($conn);
+
+//load card builder
+include_once "includes/build_project_bootstrap_card.php";
+
+?>
+
 <!doctype html>
 <html>
   <head>
@@ -17,7 +34,7 @@
 
       <div class="masthead clearfix mb-auto">
         <div class="container inner">
-          <h3 class="masthead-brand">Aura Development Team</h3>
+          <h3 class="masthead-brand"><?php echo($settings["navbar_brand"]); ?></h3>
           <nav class="masthead-nav">
             <ul class="nav masthead-nav">
               <li class="nav-link"><a href="./index.php">Home</a></li>
@@ -28,27 +45,7 @@
       </div>
 
       <div class="card-deck text-center">
-        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Dark card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Dark card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-          <div class="card-header">Header</div>
-          <div class="card-body">
-            <h5 class="card-title">Dark card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
+        <?php buildCards($projects_data); ?>
       </div>
 
     </div>
