@@ -47,7 +47,7 @@ include_once "includes/build_project_bootstrap_card.php";
         </div>
       </div>
 
-      <div class="card-deck text-center">
+      <div class="card-deck text-center w-75 mx-auto">
         <?php buildCards($projects_data); ?>
       </div>
 
