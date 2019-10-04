@@ -42,7 +42,7 @@ $settings = loadSettings($conn);
 
       <div class="container">
         <div class="inner cover">
-          <img class="homepage-image" type="image/svg+xml" data="/img/logo.svg" />
+          <object class="homepage-image" type="image/svg+xml" data="/img/logo.svg" />
           <p class="lead"><?php echo($settings["homepage_text"]); ?></p>
           <p class="lead projects-button">
             <a href="./projects.php" class="btn btn-lg btn-secondary">Our Projects</a>
