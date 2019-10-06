@@ -42,7 +42,7 @@ $settings = loadSettings($conn);
 
       <div class="container">
         <div class="inner cover">
-          <object class="homepage-image" type="image/svg+xml" data="/img/logo.svg">ADT Logo</object>
+          <img class="homepage-image" alt="ADT Logo" title="ADT Logo" src="/img/logo.svg">
           <p class="lead"><?php echo($settings["homepage_text"]); ?></p>
           <p class="lead projects-button">
             <a href="./projects.php" class="btn btn-lg btn-secondary">Our Projects</a>
