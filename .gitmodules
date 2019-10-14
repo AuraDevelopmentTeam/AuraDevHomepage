@@ -1,0 +1,9 @@
+[submodule "includes/parsedown"]
+	path = includes/parsedown
+	url = https://github.com/erusev/parsedown.git
+[submodule "includes/parsedown_extra"]
+	path = includes/parsedown_extra
+	url = https://github.com/erusev/parsedown-extra.git
+[submodule "includes/parsedown_extreme"]
+	path = includes/parsedown_extreme
+	url = https://github.com/BenjaminHoegh/parsedown-extreme.git
