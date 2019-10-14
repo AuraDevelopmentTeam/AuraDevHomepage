@@ -1,9 +1,9 @@
 <?php
 //connect to mysql
-include_once "includes/mysql_connection.php";
+include_once "../includes/mysql_connection.php";
 
 //get page settings
-include_once "includes/get_settings.php";
+include_once "../includes/get_settings.php";
 $settings = loadSettings($conn);
 
 ?>

@@ -1,17 +1,17 @@
 <?php
 //connect to mysql
-include_once "includes/mysql_connection.php";
+include_once "../includes/mysql_connection.php";
 
 //get page settings
-include_once "includes/get_settings.php";
+include_once "../includes/get_settings.php";
 $settings = loadSettings($conn);
 
 //get list of projects
-include_once "includes/get_projects.php";
+include_once "../includes/get_projects.php";
 $projects_data = getProjects($conn);
 
 //load card builder
-include_once "includes/build_project_bootstrap_card.php";
+include_once "../includes/build_project_bootstrap_card.php";
 
 ?>
 
