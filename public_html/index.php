@@ -1,9 +1,9 @@
 <?php
 //connect to mysql
-include_once "../includes/mysql_connection.php";
+require_once "../includes/mysql_connection.php";
 
 //get page settings
-include_once "../includes/get_settings.php";
+require_once "../includes/get_settings.php";
 $settings = loadSettings($conn);
 
 ?>
@@ -21,6 +21,11 @@ $settings = loadSettings($conn);
     <link href="./css/common.css" rel="stylesheet">
     <!-- Page specific CSS -->
     <link href="./css/index.css" rel="stylesheet">
+
+    <!-- jquery, Bootstrap & Popper JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" defer></script>
 
 </head>
 <body>
@@ -54,10 +59,5 @@ $settings = loadSettings($conn);
     </div>
 
   </div>
-
-    <!-- jquery, Bootstrap & Popper JS-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>
