@@ -2,11 +2,15 @@
 # Custom ignores
 ###################
 
-# Make the settings file persistent while still having it in the repo
+# Make the settings files persistent while still having it in the repo
 includes/settings.php
+nginx/config.conf
 
 # Ignore the logging dir
 log/
+
+# Ignore the caching dir
+cache/
 
 ###################
 # Linux
