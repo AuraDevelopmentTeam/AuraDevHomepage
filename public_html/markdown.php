@@ -16,7 +16,7 @@ $parsedown = get_parsedown();
   echo $parsedown->text('Hello _Parsedown_!');
   ?>
   <pre>
-  <?php
+<?php
   var_dump($_GET);
   ?>
   </pre>

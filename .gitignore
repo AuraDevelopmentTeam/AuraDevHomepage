@@ -10,7 +10,7 @@ nginx/config.conf
 log/
 
 # Ignore the caching dir
-cache/
+.cache/
 
 ###################
 # Linux

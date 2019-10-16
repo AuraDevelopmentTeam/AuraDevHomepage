@@ -1,7 +1,7 @@
 <?php
 // Allow invoker to override the file name
 if (!isset($file)) $file = $_SERVER['REQUEST_URI'];
-$cachefile = dirname(__DIR__) . '/cache/' . sha1($file);
+$cachefile = dirname(__DIR__) . '/.cache/' . sha1($file);
 $cachetime = 18000; // 5 hours
 
 // Serve from the cache if it is younger than $cachetime and no orginal file exists or if the real file it is based on (if exists) has been updated
