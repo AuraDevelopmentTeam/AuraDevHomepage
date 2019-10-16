@@ -1,4 +1,5 @@
 <?php
+require "../includes/cache_top.php";
 
 // Use parsedown
 require_once "../includes/parsedown.php";
@@ -21,3 +22,6 @@ $parsedown = get_parsedown();
   </pre>
   </body>
 </html>
+<?php
+require "../includes/cache_bottom.php";
+?>
