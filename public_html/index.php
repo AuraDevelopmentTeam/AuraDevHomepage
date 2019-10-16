@@ -1,11 +1,13 @@
 <?php
-//connect to mysql
+// Cache page
+require "../includes/cache_top.php";
+
+// Connect to mysql
 require_once "../includes/mysql_connection.php";
 
-//get page settings
+// Get page settings
 require_once "../includes/get_settings.php";
 $settings = loadSettings($conn);
-
 ?>
 <!doctype html>
 <html>
@@ -27,37 +29,41 @@ $settings = loadSettings($conn);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" defer></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" defer></script>
 
-</head>
-<body>
-  <div class="site-wrapper">
+  </head>
+  <body>
+    <div class="site-wrapper">
 
-    <div class="site-wrapper-inner">
+      <div class="site-wrapper-inner">
 
-      <div class="masthead clearfix mb-auto">
-        <div class="container inner">
-          <h3 class="masthead-brand"><?php echo($settings["navbar_brand"]); ?></h3>
-          <nav class="masthead-nav">
-            <ul class="nav masthead-nav">
-              <li class="nav-link active"><a href="#">Home</a></li>
-              <li class="nav-link"><a href="./projects.php">Projects</a></li>
-            </ul>
-          </nav>
+        <div class="masthead clearfix mb-auto">
+          <div class="container inner">
+            <h3 class="masthead-brand"><a href="/"><?php echo($settings["navbar_brand"]); ?></a></h3>
+            <nav class="masthead-nav">
+              <ul class="nav masthead-nav">
+                <li class="nav-link active"><a href="#">Home</a></li>
+                <li class="nav-link"><a href="/projects.php">Projects</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
 
-      <div class="container">
-        <div class="inner cover">
-          <img class="homepage-image" alt="ADT Logo" title="ADT Logo" src="/img/logo.svg">
-          <p class="lead"><?php echo($settings["homepage_text"]); ?></p>
-          <p class="lead projects-button">
-            <a href="./projects.php" class="btn btn-lg btn-secondary">Our Projects</a>
-          </p>
+        <div class="container">
+          <div class="inner cover">
+            <img class="homepage-image" alt="ADT Logo" title="ADT Logo" src="/img/logo.svg">
+            <p class="lead"><?php echo($settings["homepage_text"]); ?></p>
+            <p class="lead projects-button">
+              <a href="./projects.php" class="btn btn-lg btn-secondary">Our Projects</a>
+            </p>
+          </div>
+
         </div>
 
       </div>
 
     </div>
-
-  </div>
   </body>
 </html>
+<?php
+// Finish page cache
+require "../includes/cache_bottom.php";
+?>

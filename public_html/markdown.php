@@ -1,4 +1,5 @@
 <?php
+// Cache page
 require "../includes/cache_top.php";
 
 // Use parsedown
@@ -23,5 +24,6 @@ $parsedown = get_parsedown();
   </body>
 </html>
 <?php
+// Finish page cache
 require "../includes/cache_bottom.php";
 ?>
