@@ -1,7 +1,7 @@
 <?php
 
 // Use parsedown
-require_once "parsedown.php";
+require_once "../includes/parsedown.php";
 
 $parsedown = get_parsedown();
 
