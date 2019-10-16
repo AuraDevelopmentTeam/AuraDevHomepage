@@ -1,25 +1,26 @@
 <?php
 // Allow invoker to override the file name
-if (!isset($file)) $file = $_SERVER['REQUEST_URI'];
-$cachefile = dirname(__DIR__) . '/.cache/' . sha1($file);
-$cachetime = 18000; // 5 hours
+if (!isset($_cache_file)) $_cache_file = $_SERVER['REQUEST_URI'];
+$_cache_cachedir = dirname(__DIR__) . '/.cache';
+$_cache_cachefile = "$_cache_cachedir/" . sha1($file);
+$_cache_cachetime = 18000; // 5 hours
 
 // Serve from the cache if it is younger than $cachetime and no orginal file exists or if the real file it is based on (if exists) has been updated
 if (
-  file_exists($cachefile) && 
+  file_exists($_cache_cachefile) && 
   (
     (
-      !isset($real_file) && 
-      ((time() - $cachetime) < filemtime($cachefile))
+      !isset($_cache_real_file) && 
+      ((time() - $_cache_cachetime) < filemtime($_cache_cachefile))
     ) ||
     (
-      isset($real_file) &&
-      (filemtime($real_file) < filemtime($cachefile))
+      isset($_cache_real_file) &&
+      (filemtime($_cache_real_file) < filemtime($_cache_cachefile))
     )
   )
 ) {
-  echo '<!-- Cached copy, generated ' . date('c', filemtime($cachefile)) . " -->\n";
-  readfile($cachefile);
+  echo '<!-- Cached copy, generated ' . date('c', filemtime($_cache_cachefile)) . " -->\n";
+  readfile($_cache_cachefile);
   exit;
 }
 
