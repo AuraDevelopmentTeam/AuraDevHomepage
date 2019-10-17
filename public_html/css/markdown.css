@@ -1993,18 +1993,6 @@ table {
   width: 0
 }
 
-html {
-  font-size: .875em;
-  background: #fff;
-  color: #373D49
-}
-
-html,
-body {
-  font-family: Georgia, Cambria, serif;
-  height: 100%
-}
-
 body {
   font-size: 1rem;
   font-weight: 400;
@@ -2124,14 +2112,14 @@ h6 {
 
 a {
   cursor: pointer;
-  color: #35D7BB;
+  color: #118280;
   text-decoration: none
 }
 
 a:hover,
 a:focus {
-  border-bottom-color: #35D7BB;
-  color: #dff9f4
+  border-bottom-color: #118280;
+  color: #159994;
 }
 
 img {
