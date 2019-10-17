@@ -1,6 +1,7 @@
 <?php
 define('PATH_START', '/documentation');
 define('PATH_START_LENGTH', strlen(PATH_START));
+define('DOCUMENTATION_PATH', '..' . PATH_START);
 
 // Find out what page we want to see
 $page = isset($_GET['page'])? $_GET['page'] : '';
@@ -16,7 +17,7 @@ if (substr($page, -1) === '/') {
   $page .= "index";
 }
 
-$file = "../documentation/$page.md";
+$file = DOCUMENTATION_PATH . "$page.md";
 
 if (!file_exists($file)) {
   $error_code = 404;
