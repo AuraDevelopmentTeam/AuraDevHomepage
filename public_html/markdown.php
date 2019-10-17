@@ -1,29 +1,51 @@
 <?php
+define('PATH_START', '/documentation');
+define('PATH_START_LENGTH', strlen(PATH_START));
+
+// Find out what page we want to see
+$page = isset($_GET['page'])? $_GET['page'] : '';
+
+if (strpos($page, '/documentation') !== 0) {
+  $error_code = 404;
+  require 'error.php';
+}
+
+$page = substr($page, PATH_START_LENGTH);
+
+if (substr($page, -1) === '/') {
+  $page .= "index";
+}
+
+$file = "../documentation/$page.md";
+
+if (!file_exists($file)) {
+  $error_code = 404;
+  require 'error.php';
+}
+
 // Cache page
-require "../includes/cache_top.php";
+require '../includes/cache_top.php';
 
 // Use parsedown
-require_once "../includes/parsedown.php";
-
+require_once '../includes/parsedown.php';
 $parsedown = get_parsedown();
+
+$content = file_get_contents($file);
+$title = ltrim(explode("\n", $content)[0], "# ");
 
 ?>
 <!doctype html>
 <html>
   <head>
+    <title><?php echo $title;?></title>
   </head>
   <body>
   <?php
-  echo $parsedown->text('Hello _Parsedown_!');
+  echo $parsedown->text($content);
   ?>
-  <pre>
-<?php
-  var_dump($_GET);
-  ?>
-  </pre>
   </body>
 </html>
 <?php
 // Finish page cache
-require "../includes/cache_bottom.php";
+require '../includes/cache_bottom.php';
 ?>
