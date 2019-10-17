@@ -17,7 +17,7 @@ $projects_data = getProjects($conn);
 require_once '../includes/build_project_bootstrap_card.php';
 
 // Load html_helper
-require_once '../include/html_helper.php';
+require_once '../includes/html_helper.php';
 
 html_head($settings['page_title'], 'projects');
 ?>

@@ -10,7 +10,7 @@ require_once '../includes/get_settings.php';
 $settings = loadSettings($conn);
 
 // Load html_helper
-require_once '../include/html_helper.php';
+require_once '../includes/html_helper.php';
 
 html_head($settings['page_title'], 'index');
 ?>

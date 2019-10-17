@@ -27,7 +27,7 @@ if (!file_exists($file)) {
 // Set real file base
 $_cache_real_file = $file;
 
-// Cache page
+// Start caching late because we might 404 (and don't want to cache that)
 require '../includes/cache_top.php';
 
 // Use parsedown
@@ -38,7 +38,7 @@ $content = file_get_contents($file);
 $title = strip_tags($parsedown->line(ltrim(explode("\n", $content)[0], "# ")));
 
 // Load html_helper
-require_once '../include/html_helper.php';
+require_once '../includes/html_helper.php';
 
 html_head($title, 'markdown');
 ?>
