@@ -12,6 +12,9 @@ log/
 # Ignore the caching dir
 .cache/
 
+# Ignore documentation files
+documentation/
+
 ###################
 # Linux
 ###################
