@@ -1,41 +1,26 @@
 <?php
 // Cache page
-require "../includes/cache_top.php";
+require '../includes/cache_top.php';
 
 // Connect to mysql
-require_once "../includes/mysql_connection.php";
+require_once '../includes/mysql_connection.php';
 
 // Get page settings
-require_once "../includes/get_settings.php";
+require_once '../includes/get_settings.php';
 $settings = loadSettings($conn);
 
 // Get list of projects
-require_once "../includes/get_projects.php";
+require_once '../includes/get_projects.php';
 $projects_data = getProjects($conn);
 
 // Load card builder
-require_once "../includes/build_project_bootstrap_card.php";
+require_once '../includes/build_project_bootstrap_card.php';
+
+// Load html_helper
+require_once '../include/html_helper.php';
+
+html_head($settings['page_title'], 'projects');
 ?>
-<!doctype html>
-<html>
-  <head>
-   <title><?php echo($settings["page_title"]); ?></title>
-
-   <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-   <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- Custom styles for this template -->
-    <link href="./css/common.css" rel="stylesheet">
-    <!-- Page specific CSS -->
-    <link href="./css/projects.css" rel="stylesheet">
-
-    <!-- jquery, Bootstrap & Popper JS-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" defer></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" defer></script>
-
   </head>
   <body>
     <div class="site-wrapper">
@@ -43,7 +28,7 @@ require_once "../includes/build_project_bootstrap_card.php";
 
         <div class="masthead clearfix mb-auto">
           <div class="container inner">
-            <h3 class="masthead-brand"><a href="/"><?php echo($settings["navbar_brand"]); ?></a></h3>
+            <h3 class="masthead-brand"><a href="/"><?php echo($settings['navbar_brand']); ?></a></h3>
             <nav class="masthead-nav">
               <ul class="nav masthead-nav">
                 <li class="nav-link"><a href="/">Home</a></li>
