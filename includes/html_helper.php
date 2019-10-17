@@ -32,3 +32,14 @@ function html_head($title = 'Unknown Page Title', $page_specifc_css = false) {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" defer></script>
 <?php
 }
+
+// Closes the body and html tag and adds the Octocat banner
+function html_end($forkme_link = "https://github.com/AuraDevelopmentTeam/Web") {
+?>
+    <a href="<?php echo $forkme_link; ?>" class="github-corner" title="Fork us on GitHub">
+      <object type="image/svg+xml" data="/img/octocat.svg">Fork us on GitHub</object>
+    </a>
+  </body>
+</html>
+<?php
+}

@@ -44,9 +44,9 @@ html_head($settings['page_title'], 'projects');
 
       </div>
     </div>
-  </body>
-</html>
 <?php
+html_end();
+
 // Finish page cache
 require "../includes/cache_bottom.php";
 ?>

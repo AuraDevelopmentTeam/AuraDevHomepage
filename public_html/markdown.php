@@ -44,12 +44,14 @@ html_head($title, 'markdown');
 ?>
   </head>
   <body class="markdown">
+    <div class="markdown-wrapper">
 <?php
 echo $parsedown->text($content);
 ?>
-  </body>
-</html>
+    </div>
 <?php
+html_end(/* "https://github.com/AuraDevelopmentTeam/Documentations" */);
+
 // Finish page cache
 require '../includes/cache_bottom.php';
 ?>

@@ -46,9 +46,9 @@ html_head($settings['page_title'], 'index');
       </div>
 
     </div>
-  </body>
-</html>
 <?php
+html_end();
+
 // Finish page cache
 require "../includes/cache_bottom.php";
 ?>
