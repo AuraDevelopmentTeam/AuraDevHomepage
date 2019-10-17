@@ -24,6 +24,9 @@ if (!file_exists($file)) {
   require 'error.php';
 }
 
+// Set real file base
+$_cache_real_file = $file;
+
 // Cache page
 require '../includes/cache_top.php';
 
