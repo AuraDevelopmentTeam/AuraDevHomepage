@@ -37,7 +37,7 @@ html_head($settings['page_title'], 'index');
             <img class="homepage-image" alt="ADT Logo" title="ADT Logo" src="/img/logo.svg">
             <p class="lead"><?php echo($settings['homepage_text']); ?></p>
             <p class="lead projects-button">
-              <a href="./projects.php" class="btn btn-lg btn-secondary">Our Projects</a>
+              <a href="/projects.php" class="btn btn-lg btn-secondary">Our Projects</a>
             </p>
           </div>
 

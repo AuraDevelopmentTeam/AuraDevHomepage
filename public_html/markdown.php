@@ -37,16 +37,16 @@ $parsedown = get_parsedown();
 $content = file_get_contents($file);
 $title = strip_tags($parsedown->line(ltrim(explode("\n", $content)[0], "# ")));
 
+// Load html_helper
+require_once '../include/html_helper.php';
+
+html_head($title, 'markdown');
 ?>
-<!doctype html>
-<html>
-  <head>
-    <title><?php echo $title;?></title>
   </head>
   <body>
-  <?php
-  echo $parsedown->text($content);
-  ?>
+<?php
+echo $parsedown->text($content);
+?>
   </body>
 </html>
 <?php
