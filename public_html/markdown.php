@@ -32,7 +32,7 @@ require_once '../includes/parsedown.php';
 $parsedown = get_parsedown();
 
 $content = file_get_contents($file);
-$title = ltrim(explode("\n", $content)[0], "# ");
+$title = strip_tags($parsedown->line(ltrim(explode("\n", $content)[0], "# ")));
 
 ?>
 <!doctype html>
