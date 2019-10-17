@@ -18,7 +18,7 @@ svg:hover .octo-arm {
   }
 }
 
-@media (max-width:500px) {
+@media (max-device-width:500px) {
   svg:hover .octo-arm {
     animation: none;
   }
