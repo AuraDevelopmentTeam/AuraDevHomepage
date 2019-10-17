@@ -5,7 +5,7 @@ if (!isset($_cache_cachetime)) $_cache_cachetime = 18000; // 5 hours by default
 
 // Unadjustable values
 $_cache_cachedir = dirname(__DIR__) . '/.cache';
-$_cache_cacheid = sha1($_cache_file)
+$_cache_cacheid = sha1($_cache_file);
 $_cache_cachefile = "$_cache_cachedir/$_cache_cacheid";
 
 // Serve from the cache if it is younger than $cachetime and no orginal file exists or if the real file it is based on (if exists) has been updated
