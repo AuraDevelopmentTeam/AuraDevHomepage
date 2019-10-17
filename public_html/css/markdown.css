@@ -3649,7 +3649,6 @@ img {
 body {
   max-width: 1024px;
   margin: 0 auto;
-  overflow: auto;
   padding: 2%
 }
 
