@@ -43,7 +43,7 @@ require_once '../includes/html_helper.php';
 html_head($title, 'markdown');
 ?>
   </head>
-  <body>
+  <body class="markdown">
 <?php
 echo $parsedown->text($content);
 ?>
