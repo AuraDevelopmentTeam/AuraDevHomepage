@@ -6,7 +6,7 @@ function html_head($title = 'Unknown Page Title', $page_specifc_css = false) {
 	}
 ?>
 <!doctype html>
-<html>
+<html lang="en">
   <head>
    <title><?php echo $title; ?></title>
 
