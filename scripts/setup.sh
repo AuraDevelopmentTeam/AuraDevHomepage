@@ -12,7 +12,7 @@ if [ -d documentation ] && [ -d documentation/.git ]; then
   git -C documentation pull -f
 else
   if [ -d documentation ]; then
-    rm -rf documenation
+    rm -rf documentation
   fi
 
   git clone https://github.com/AuraDevelopmentTeam/Documentation.git documentation
