@@ -45,9 +45,10 @@ html_head($title, 'markdown');
     <!-- Prism (code highlighting) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.css" integrity="sha256-udLi8HM3vM4cuDDMGyRFzG8ek0UN0+uytPLWkbTpagg=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/themes/prism-twilight.css" integrity="sha256-wBt31S0ig4cVcJ57bb4O+s6sAD9WXVfyVylVb1gGWNs=" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.js" integrity="sha256-hFhFKoZ+mZTEMFJc8FQyuDDHVB1x9v+rJRu3DelyOHQ=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-hep5s8952MqR7Y79JYfCXZD6vQjVHs7sOu/ZGrs1OEQ=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-ht8ay6ZTPZfuixYB99I5oRpCLsCq7Do2LjEYLwbe+X8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js" integrity="sha384-ccmyu9Bl8HZLIVEUqF+ZzcZTBPB8VgMI2lQpOsNDOvro/1SfRnz3qkub0eUxof1s" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha384-xF5Qt8AUh+k8ZzozF9d1iDRKeeP1m9PPJKKhy3R/O4+5JccihNLvy1fIuGnkye7+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha384-g0u6zLvZF3g2I+/vETu7YYk74PXoDBNGy5qtL04/uW6PJGMDeax43A5hFa55xaAT" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/show-language/prism-show-language.min.js" integrity="sha384-xnJRKz3VKJloaoR0FNJVmbJ55eTSeuztu0Okhd9vvz2hblDQc0UJWVkj3sIikslo" crossorigin="anonymous"></script>
     <!-- KaTeX -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
@@ -55,7 +56,7 @@ html_head($title, 'markdown');
     <!-- Mermaid -->
     <script defer src="https://unpkg.com/mermaid@8.4.0/dist/mermaid.min.js" onload="mermaid.initialize({startOnLoad:true});"></script>
   </head>
-  <body class="markdown">
+  <body class="markdown line-numbers">
     <div class="markdown-wrapper">
 <?php
 echo $parsedown->text($content);
