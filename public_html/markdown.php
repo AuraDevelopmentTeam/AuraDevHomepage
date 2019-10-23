@@ -46,11 +46,11 @@ html_head($title, 'markdown');
     <!-- Prism (code highlighting) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.css" integrity="sha256-udLi8HM3vM4cuDDMGyRFzG8ek0UN0+uytPLWkbTpagg=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/themes/prism-twilight.css" integrity="sha256-wBt31S0ig4cVcJ57bb4O+s6sAD9WXVfyVylVb1gGWNs=" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js" integrity="sha384-ccmyu9Bl8HZLIVEUqF+ZzcZTBPB8VgMI2lQpOsNDOvro/1SfRnz3qkub0eUxof1s" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha384-xF5Qt8AUh+k8ZzozF9d1iDRKeeP1m9PPJKKhy3R/O4+5JccihNLvy1fIuGnkye7+" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha384-g0u6zLvZF3g2I+/vETu7YYk74PXoDBNGy5qtL04/uW6PJGMDeax43A5hFa55xaAT" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/toolbar/prism-toolbar.min.js" integrity="sha384-Q7kIVs9c3Zyij/OpKzuVFFpRTTXHL3qytFywO0AtJdmisfKKSEsnoc7pHfkxgXZX" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/show-language/prism-show-language.min.js" integrity="sha384-xnJRKz3VKJloaoR0FNJVmbJ55eTSeuztu0Okhd9vvz2hblDQc0UJWVkj3sIikslo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js" integrity="sha384-ccmyu9Bl8HZLIVEUqF+ZzcZTBPB8VgMI2lQpOsNDOvro/1SfRnz3qkub0eUxof1s" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha384-xF5Qt8AUh+k8ZzozF9d1iDRKeeP1m9PPJKKhy3R/O4+5JccihNLvy1fIuGnkye7+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha384-g0u6zLvZF3g2I+/vETu7YYk74PXoDBNGy5qtL04/uW6PJGMDeax43A5hFa55xaAT" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/toolbar/prism-toolbar.min.js" integrity="sha384-Q7kIVs9c3Zyij/OpKzuVFFpRTTXHL3qytFywO0AtJdmisfKKSEsnoc7pHfkxgXZX" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/show-language/prism-show-language.min.js" integrity="sha384-xnJRKz3VKJloaoR0FNJVmbJ55eTSeuztu0Okhd9vvz2hblDQc0UJWVkj3sIikslo" crossorigin="anonymous"></script>
     <!-- KaTeX (math rendering) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
