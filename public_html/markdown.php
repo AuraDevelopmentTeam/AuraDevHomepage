@@ -50,11 +50,11 @@ html_head($title, 'markdown');
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha384-xF5Qt8AUh+k8ZzozF9d1iDRKeeP1m9PPJKKhy3R/O4+5JccihNLvy1fIuGnkye7+" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha384-g0u6zLvZF3g2I+/vETu7YYk74PXoDBNGy5qtL04/uW6PJGMDeax43A5hFa55xaAT" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/show-language/prism-show-language.min.js" integrity="sha384-xnJRKz3VKJloaoR0FNJVmbJ55eTSeuztu0Okhd9vvz2hblDQc0UJWVkj3sIikslo" crossorigin="anonymous"></script>
-    <!-- KaTeX -->
+    <!-- KaTeX (math rendering) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-    <!-- Mermaid -->
+    <!-- Mermaid (graphs) -->
     <script defer src="https://unpkg.com/mermaid@8.4.0/dist/mermaid.min.js" integrity="sha384-VMxod3UViCDOhgl3zLOlLoDd6tt4n3HYqCH9w798Q7U4sY2ueIN9Rz14B9MDfzdt" crossorigin="anonymous" onload="mermaid.initialize({startOnLoad:true});"></script>
   </head>
   <body class="markdown line-numbers">
