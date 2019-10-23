@@ -43,6 +43,8 @@ require_once '../includes/html_helper.php';
 html_head($title, 'markdown');
 ?>
 
+    <!-- Clipboard.js (needed by Prism) -->
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" integrity="sha384-8CYhPwYlLELodlcQV713V9ZikA3DlCVaXFDpjHfP8Z36gpddf/Vrt47XmKDsCttu" crossorigin="anonymous"></script>
     <!-- Prism (code highlighting) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/themes/prism-twilight.min.css" integrity="sha384-RmPuN9UVeP84hAhdksuFe8mL2JYmnOQ8yoqMr1kGOBe+yNY2iffSq8fwjwSCNTtj" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha384-73RkcZ9rvuSKIuqyqhSr2rNUUs5NwNRRKEVHjoDeUq3gHqWHDf3P2r7OTlD65eAH" crossorigin="anonymous">
@@ -51,6 +53,7 @@ html_head($title, 'markdown');
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha384-xF5Qt8AUh+k8ZzozF9d1iDRKeeP1m9PPJKKhy3R/O4+5JccihNLvy1fIuGnkye7+" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha384-g0u6zLvZF3g2I+/vETu7YYk74PXoDBNGy5qtL04/uW6PJGMDeax43A5hFa55xaAT" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/toolbar/prism-toolbar.min.js" integrity="sha384-Q7kIVs9c3Zyij/OpKzuVFFpRTTXHL3qytFywO0AtJdmisfKKSEsnoc7pHfkxgXZX" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha384-V+ZXzru/5DpvSuLtIS2SctoAyvpigW+zF56aiGLPc+PvQxO3EkpeYDUw6t1Y6d9y" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/show-language/prism-show-language.min.js" integrity="sha384-xnJRKz3VKJloaoR0FNJVmbJ55eTSeuztu0Okhd9vvz2hblDQc0UJWVkj3sIikslo" crossorigin="anonymous"></script>
     <!-- KaTeX (math rendering) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
