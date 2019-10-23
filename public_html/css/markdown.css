@@ -5,6 +5,10 @@
   right: .9em;
 }
 
+div.code-toolbar > .toolbar .toolbar-item:not(:first-child) {
+  margin-left: .5em
+}
+
 kbd {
   padding: 2px 4px
 }
