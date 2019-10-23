@@ -44,8 +44,8 @@ html_head($title, 'markdown');
 ?>
 
     <!-- Prism (code highlighting) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.css" integrity="sha256-udLi8HM3vM4cuDDMGyRFzG8ek0UN0+uytPLWkbTpagg=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/themes/prism-twilight.css" integrity="sha256-wBt31S0ig4cVcJ57bb4O+s6sAD9WXVfyVylVb1gGWNs=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.css" integrity="sha384-wJ+yoK3Ng3mHErz9W5n5nMo0ex00idHs+6eH03BThZ9RoG4Fl7ysTD0GRk4s2XfX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/themes/prism-twilight.css" integrity="sha384-kbfQzMP9HGYuo7B3cz1vAH2EuwB3lysl+3QjJIib11WK8EnBhxULnVYSni/AGScJ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js" integrity="sha384-ccmyu9Bl8HZLIVEUqF+ZzcZTBPB8VgMI2lQpOsNDOvro/1SfRnz3qkub0eUxof1s" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha384-xF5Qt8AUh+k8ZzozF9d1iDRKeeP1m9PPJKKhy3R/O4+5JccihNLvy1fIuGnkye7+" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha384-g0u6zLvZF3g2I+/vETu7YYk74PXoDBNGy5qtL04/uW6PJGMDeax43A5hFa55xaAT" crossorigin="anonymous"></script>
