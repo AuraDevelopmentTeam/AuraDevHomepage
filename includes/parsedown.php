@@ -12,6 +12,7 @@ function get_parsedown() {
   //  - https://github.com/erusev/parsedown#escaping-html
   //  - https://github.com/erusev/parsedown-extra
   //  - https://github.com/BenjaminHoegh/parsedown-extreme#new-features
+  $parsedown->enableKatex(true);
 
   return $parsedown;
 }
