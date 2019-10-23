@@ -13,6 +13,7 @@ function get_parsedown() {
   //  - https://github.com/erusev/parsedown-extra
   //  - https://github.com/BenjaminHoegh/parsedown-extreme#new-features
   $parsedown->enableKatex(true);
+  $parsedown->enableMermaid(true);
 
   return $parsedown;
 }
