@@ -42,6 +42,7 @@ require_once '../includes/html_helper.php';
 
 html_head($title, 'markdown');
 ?>
+
     <!-- Prism (code highlighting) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.css" integrity="sha256-udLi8HM3vM4cuDDMGyRFzG8ek0UN0+uytPLWkbTpagg=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/themes/prism-twilight.css" integrity="sha256-wBt31S0ig4cVcJ57bb4O+s6sAD9WXVfyVylVb1gGWNs=" crossorigin="anonymous">
