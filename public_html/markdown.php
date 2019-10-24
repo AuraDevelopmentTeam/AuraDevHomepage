@@ -60,7 +60,7 @@ html_head($title, 'markdown');
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
     <!-- Mermaid (graphs) -->
-    <script defer src="https://unpkg.com/mermaid@8.4.0/dist/mermaid.min.js" integrity="sha384-VMxod3UViCDOhgl3zLOlLoDd6tt4n3HYqCH9w798Q7U4sY2ueIN9Rz14B9MDfzdt" crossorigin="anonymous" onload="mermaid.initialize({startOnLoad:true});"></script>
+    <script defer src="https://unpkg.com/mermaid@8.4.0/dist/mermaid.min.js" integrity="sha384-VMxod3UViCDOhgl3zLOlLoDd6tt4n3HYqCH9w798Q7U4sY2ueIN9Rz14B9MDfzdt" crossorigin="anonymous" onload='mermaid.initialize({startOnLoad:true,theme:"dark"});'></script>
   </head>
   <body class="markdown line-numbers">
     <div class="markdown-wrapper">
