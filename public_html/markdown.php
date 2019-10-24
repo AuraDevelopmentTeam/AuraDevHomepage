@@ -43,6 +43,12 @@ require_once '../includes/html_helper.php';
 html_head($title, 'markdown');
 ?>
 
+    <!-- KaTeX (math rendering) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <!-- Mermaid (graphs) -->
+    <script defer src="https://unpkg.com/mermaid@8.4.0/dist/mermaid.min.js" integrity="sha384-VMxod3UViCDOhgl3zLOlLoDd6tt4n3HYqCH9w798Q7U4sY2ueIN9Rz14B9MDfzdt" crossorigin="anonymous" onload='mermaid.initialize({startOnLoad:true,theme:"dark"});'></script>
     <!-- Clipboard.js (needed by Prism) -->
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" integrity="sha384-8CYhPwYlLELodlcQV713V9ZikA3DlCVaXFDpjHfP8Z36gpddf/Vrt47XmKDsCttu" crossorigin="anonymous"></script>
     <!-- Prism (code highlighting) -->
@@ -50,17 +56,11 @@ html_head($title, 'markdown');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha384-73RkcZ9rvuSKIuqyqhSr2rNUUs5NwNRRKEVHjoDeUq3gHqWHDf3P2r7OTlD65eAH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/toolbar/prism-toolbar.min.css" integrity="sha384-g+Y7om22MSNM7zDSqq7mHZco1AN7PVWhohs63psIRSXVcSdP5IqeZiCnUDvRUmAi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js" integrity="sha384-ccmyu9Bl8HZLIVEUqF+ZzcZTBPB8VgMI2lQpOsNDOvro/1SfRnz3qkub0eUxof1s" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha384-xF5Qt8AUh+k8ZzozF9d1iDRKeeP1m9PPJKKhy3R/O4+5JccihNLvy1fIuGnkye7+" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha384-g0u6zLvZF3g2I+/vETu7YYk74PXoDBNGy5qtL04/uW6PJGMDeax43A5hFa55xaAT" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/toolbar/prism-toolbar.min.js" integrity="sha384-Q7kIVs9c3Zyij/OpKzuVFFpRTTXHL3qytFywO0AtJdmisfKKSEsnoc7pHfkxgXZX" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha384-V+ZXzru/5DpvSuLtIS2SctoAyvpigW+zF56aiGLPc+PvQxO3EkpeYDUw6t1Y6d9y" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/show-language/prism-show-language.min.js" integrity="sha384-xnJRKz3VKJloaoR0FNJVmbJ55eTSeuztu0Okhd9vvz2hblDQc0UJWVkj3sIikslo" crossorigin="anonymous"></script>
-    <!-- KaTeX (math rendering) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-    <!-- Mermaid (graphs) -->
-    <script defer src="https://unpkg.com/mermaid@8.4.0/dist/mermaid.min.js" integrity="sha384-VMxod3UViCDOhgl3zLOlLoDd6tt4n3HYqCH9w798Q7U4sY2ueIN9Rz14B9MDfzdt" crossorigin="anonymous" onload='mermaid.initialize({startOnLoad:true,theme:"dark"});'></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha384-xF5Qt8AUh+k8ZzozF9d1iDRKeeP1m9PPJKKhy3R/O4+5JccihNLvy1fIuGnkye7+" crossorigin="anonymous"></script>
   </head>
   <body class="markdown line-numbers">
     <div class="markdown-wrapper">
