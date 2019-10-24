@@ -20,6 +20,8 @@ if ((isset($_POST['payload']) && !empty($_POST['payload'])) && (isset($_SERVER['
   $payload = json_decode($_POST['payload'], true);
 
   if ($payload['ref'] !== ('refs/heads/' . $settings['branch'])) {
+    // 304 Not Modified
+    http_response_code(304);
     die("Wrong branch\n");
   }
 
