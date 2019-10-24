@@ -8,9 +8,9 @@ echo
 echo "Updating Base Repository!"
 
 # Action
-git documentation clean -fd
-git documentation reset --hard
-git documentation pull -f
+git clean -fd
+git reset --hard
+git pull -f
 
 # Log footer
 echo "DONE!"
