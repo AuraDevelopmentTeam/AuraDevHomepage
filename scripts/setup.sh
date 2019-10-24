@@ -14,7 +14,7 @@ echo
 cp -afv .hooks/* .git/hooks/
 
 # Update/Setup the docs
-. "$SCRIPT_DIR/update_docs.sh"
+"$SCRIPT_DIR/update_docs.sh" -p | ts '    '
 
 # Log footer
 echo "DONE!"
