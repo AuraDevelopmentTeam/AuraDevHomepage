@@ -10,6 +10,9 @@ echo
 echo "Setting up the repository!"
 echo
 
+# Copy git hooks
+cp -afv .hooks/* .git/hooks/
+
 # Update/Setup the docs
 . "$SCRIPT_DIR/update_docs.sh"
 
