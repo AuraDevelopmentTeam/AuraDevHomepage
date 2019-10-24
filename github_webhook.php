@@ -3,5 +3,5 @@
 // Use in the "Post-Receive URLs" section of your GitHub repo.
 
 if ( $_POST['payload'] ) {
-  shell_exec('scripts/update_repo.sh -i');
+  echo shell_exec('scripts/update_repo.sh -i');
 }
