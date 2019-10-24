@@ -36,8 +36,21 @@ if [ "$MODE" != "passthrough" ]; then
     logger=">>"
   fi
 
+  log_file="$REPO_DIR/log/update.log"
+
+  max_file_size=1024 # 1024 KiB = 1MiB
+  max_line_count=10000
+
+  file_size=$(du -k "$log_file" | tr -s '\t' ' ' | cut -d' ' -f1)
+
+  # Rotate the log when it's too big
+  # Also count lines late to improve performance (and it's readable anyways)
+  if [ $file_size -gt $max_file_size ] || [ $(wc -l "$log_file") -gt $max_line_count ]; then
+    savelog -p -J -9 -c 100 "$log_file"
+  fi
+
   # Run script again (in passthrough mode) with logging
-  eval "\"$0\" -p 2>&1 | ts -s '(%H:%M:%.S)]' 2>&1 | ts '[%Y-%m-%d %H:%M:%S' 2>&1 $logger \"$REPO_DIR/log/update.log\""
+  eval "\"$0\" -p 2>&1 | ts -s '(%H:%M:%.S)]' 2>&1 | ts '[%Y-%m-%d %H:%M:%S' 2>&1 $logger \"$log_file\""
   exit $?
 fi
 
