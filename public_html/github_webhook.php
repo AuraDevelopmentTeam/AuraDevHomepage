@@ -18,13 +18,26 @@ if ((isset($_POST['payload']) && !empty($_POST['payload'])) && (isset($_SERVER['
 
   // At this point we can trust the payload
   $payload = json_decode($_POST['payload'], true);
+  $repository = $payload['repository']['name']
+  $ref = $payload['ref'];
 
-  if ($payload['ref'] !== ('refs/heads/' . $settings['branch'])) {
-    die("Wrong branch\n");
+  if ($repository === 'AuraDevHomepage') {
+    if ($ref !== ('refs/heads/' . $settings['branch'])) {
+      die("Wrong branch\n");
+    }
+
+    // All ligths are green. Finally run script!
+    echo shell_exec('../scripts/update_repo.sh -i 2>&1');
+  } elseif ($repository === 'Documentation') {
+    if ($ref !== 'refs/heads/master') {
+      die("Wrong branch\n");
+    }
+
+    // All ligths are green. Finally run script!
+    echo shell_exec('../scripts/update_docs.sh -i 2>&1');
+  } else {
+    die("Wrong repository\n");
   }
-
-  // All ligths are green. Finally run script!
-  echo shell_exec('../scripts/update_repo.sh -i 2>&1');
 } else {
   // Let's pretend we don't exist
   $error_code = 404;
