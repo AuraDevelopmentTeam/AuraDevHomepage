@@ -1,10 +1,17 @@
 #! /bin/bash
 
-# Get base dir
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
-# Move to base directory
-cd "$DIR/.."
+# Log these actions
+. "$SCRIPT_DIR/log_helper.sh"
+
+# Log header
+echo
+echo "Setting up the repository!"
+echo
 
 # Update/Setup the docs
-"$DIR/update_docs.sh"
+. "$SCRIPT_DIR/update_docs.sh"
+
+# Log footer
+echo "DONE!"
