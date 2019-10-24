@@ -24,7 +24,7 @@ if [ -z "$MODE" ]; then
 fi
 
 # Get base dir
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." >/dev/null 2>&1 && pwd)"
 
 # Start the script again with logging if running in interactive or daemon mode, else just continue
 if [ "$MODE" != "passthrough" ]; then
@@ -37,7 +37,7 @@ if [ "$MODE" != "passthrough" ]; then
   fi
 
   # Run script again (in passthrough mode) with logging
-  eval "\"$0\" -p 2>&1 | ts -s '(%H:%M:%.S)]' 2>&1 | ts '[%Y-%m-%d %H:%M:%S' 2>&1 $logger \"$DIR/../log/update.log\""
+  eval "\"$0\" -p 2>&1 | ts -s '(%H:%M:%.S)]' 2>&1 | ts '[%Y-%m-%d %H:%M:%S' 2>&1 $logger \"$REPO_DIR/log/update.log\""
   exit $?
 fi
 
