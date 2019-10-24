@@ -40,3 +40,6 @@ if [ "$MODE" != "passthrough" ]; then
   eval "\"$0\" -p 2>&1 | ts -s '(%H:%M:%.S)]' 2>&1 | ts '[%Y-%m-%d %H:%M:%S' 2>&1 $logger \"$DIR/../log/update.log\""
   exit $?
 fi
+
+# Make sure we are in the base dir
+cd "$DIR"
