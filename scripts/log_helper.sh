@@ -42,4 +42,4 @@ if [ "$MODE" != "passthrough" ]; then
 fi
 
 # Make sure we are in the base dir
-cd "$DIR"
+cd "$REPO_DIR"
