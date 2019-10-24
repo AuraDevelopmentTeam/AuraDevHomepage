@@ -18,7 +18,7 @@ if ((isset($_POST['payload']) && !empty($_POST['payload'])) && (isset($_SERVER['
 
   // At this point we can trust the payload
   $payload = json_decode($_POST['payload'], true);
-  $repository = $payload['repository']['name']
+  $repository = $payload['repository']['name'];
   $ref = $payload['ref'];
 
   if ($repository === 'AuraDevHomepage') {
