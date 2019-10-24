@@ -19,7 +19,7 @@ if ((isset($_POST['payload']) && !empty($_POST['payload'])) && (isset($_SERVER['
   // At this point we can trust the payload
   $payload = json_decode($_POST['payload'], true);
 
-  if ($payload['ref'] !== ('refs/heads/' . $settings['branch']) {
+  if ($payload['ref'] !== ('refs/heads/' . $settings['branch'])) {
     die("Wrong branch\n");
   }
 
