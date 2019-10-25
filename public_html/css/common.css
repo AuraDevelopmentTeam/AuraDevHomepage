@@ -1,7 +1,33 @@
 /*
  * Imported Fonts
  */
-@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca|Lexend+Exa&display=swap');
+
+/*
+ * Base structure
+ */
+
+html {
+  /* Always show scrollbar */
+  overflow-y: scroll;
+}
+html,
+body {
+  height: 100%;
+  font-family: "Lexend Deca", sans-serif;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  background-color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lexend Exa", sans-serif;
+}
 
 /*
  * Globals
@@ -22,24 +48,6 @@ a:hover {
   text-shadow: none; /* Prevent inheritence from `body` */
   background-color: #fff;
   border: 1px solid #fff;
-}
-
-
-/*
- * Base structure
- */
-
-html {
-  /* Always show scrollbar */
-  overflow-y: scroll;
-}
-html,
-body {
-  height: 100%;
-  font-family: "Lexend Deca", sans-serif;
-  color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
-  background-color: #333;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
