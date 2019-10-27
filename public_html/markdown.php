@@ -1,7 +1,7 @@
 <?php
 define('PATH_START', '/documentation');
 define('PATH_START_LENGTH', strlen(PATH_START));
-define('DOCUMENTATION_PATH', '..' . PATH_START);
+define('DOCUMENTATION_PATH', '..' . PATH_START . '/docs');
 
 // Find out what page we want to see
 $page = isset($_GET['page'])? $_GET['page'] : '';
