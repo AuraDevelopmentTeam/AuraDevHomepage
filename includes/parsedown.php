@@ -12,6 +12,10 @@ function get_parsedown() {
   //  - https://github.com/erusev/parsedown#escaping-html
   //  - https://github.com/erusev/parsedown-extra
   //  - https://github.com/BenjaminHoegh/parsedown-extreme#new-features
+  $parsedown->toc([
+    'selector' => ['h1','h2','h3','h4','h5','h6'],
+    'inline' => true,
+  ]);
   $parsedown->katex(true);
   $parsedown->mermaid(true);
 
