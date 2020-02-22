@@ -45,7 +45,7 @@ if [ "$MODE" != "passthrough" ]; then
 
   # Rotate the log when it's too big
   # Also count lines late to improve performance (and it's readable anyways)
-  if [ $file_size -gt $max_file_size ] || [ $(wc -l "$log_file") -gt $max_line_count ]; then
+  if [ $file_size -gt $max_file_size ] || [ $(wc -l "$log_file" | cut -d' ' -f1) -gt $max_line_count ]; then
     savelog -p -J -9 -c 100 "$log_file"
   fi
 
