@@ -16,19 +16,21 @@ cd nginx
 if [ -f variables.conf ]; then
   # If the settings file exits, use it
   . variables.conf
-elif [ -z "$PS1" ]; then
-  # We are not interactive and can't ask for the values...
-  echo "Error: No configured values in \"$(pwd)/variables.conf\" and no interactive shell is open"
-  echo "Try creating the file by running the script \"${BASH_SOURCE[0]}\" interactively"
-  exit 1
-else
+elif [ -t 0 ]; then
+  # No values found but able to ask the user
   # Ask user for values
+  # TODO: Make values inputable properly (ts messes with read)
   read -p "Domain: " -e DOMAIN
   read -p "Base Name: " -e -i "$(basename "$REPO_DIR")" BASE_NAME
 
   # Save values
   echo "${DOMAIN@A}" > variables.conf
   echo "${BASE_NAME@A}" > variables.conf
+else
+  # We are not interactive and can't ask for the values...
+  echo "Error: No configured values in \"$(pwd)/variables.conf\" and no interactive shell is open"
+  echo "Try creating the file by running the script \"${BASH_SOURCE[0]}\" interactively"
+  exit 1
 fi
 
 if [ -z "$DOMAIN" ] || [ -z "$BASE_NAME" ]; then
