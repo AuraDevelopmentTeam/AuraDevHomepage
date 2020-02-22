@@ -2,10 +2,10 @@
 
 require_once "parsedown/Parsedown.php";
 require_once "parsedown_extra/ParsedownExtra.php";
-require_once "parsedown_extreme/ParsedownExtreme.php";
+require_once "parsedown_extended/ParsedownExtended.php";
 
 function get_parsedown() {
-  $parsedown = new ParsedownExtreme();
+  $parsedown = new ParsedownExtended();
 
   // Settings here
   // See:
