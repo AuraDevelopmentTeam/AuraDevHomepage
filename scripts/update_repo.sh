@@ -10,10 +10,13 @@ echo
 echo "Updating Base Repository!"
 echo
 
-# Action
+# Clean repo and pull updates
 git clean -fd
 git reset --hard
 git pull -f
+
+# Update/Setup the nginx config
+"$SCRIPT_DIR/update_nginx_config.sh" -p | ts '    '
 
 # Log footer
 echo "DONE!"

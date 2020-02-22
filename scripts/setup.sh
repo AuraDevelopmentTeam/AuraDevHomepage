@@ -15,6 +15,8 @@ cp -afv .hooks/* .git/hooks/
 
 # Update/Setup the docs
 "$SCRIPT_DIR/update_docs.sh" -p | ts '    '
+# Update/Setup the nginx config
+"$SCRIPT_DIR/update_nginx_config.sh" -p | ts '    '
 
 # Log footer
 echo "DONE!"
