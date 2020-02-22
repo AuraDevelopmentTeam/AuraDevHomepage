@@ -43,8 +43,14 @@ fi
 IPv4="$(dig +short A "$DOMAIN" | tail -n1)"
 IPv6="$(dig +short AAAA "$DOMAIN" | tail -n1)"
 
+echo "${IPv4@a}"
+echo "${IPv6@a}"
+echo "${DOMAIN@a}"
+echo "${BASE_NAME@a}"
+echo "${REPO_DIR@a}"
+
 # Update/create nginx config
-cp -a config.template.conf config.conf
+cp -afv config.template.conf config.conf
 sed \
   -e "s/<IPv4>/$IPv4/g" \
   -e "s/<IPv6>/$IPv6/g" \
