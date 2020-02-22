@@ -25,7 +25,7 @@ elif [ -t 0 ]; then
 
   # Save values
   echo "${DOMAIN@A}" > variables.conf
-  echo "${BASE_NAME@A}" > variables.conf
+  echo "${BASE_NAME@A}" >> variables.conf
 else
   # We are not interactive and can't ask for the values...
   echo "Error: No configured values in \"$(pwd)/variables.conf\" and no interactive shell is open"
